@@ -1,5 +1,4 @@
 
 
 
-
-console.log("yessыы")
+console.log("yess")

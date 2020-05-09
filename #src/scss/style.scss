@@ -1,45 +1,15 @@
 @mixin font($font_name, $file_name, $weight, $style) {
-	@font-face {
-		font-family: $font_name;
-		font-display: swap;
-		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
-		font-weight: #{$weight};
-		font-style: #{$style};
-	}
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
 }
 
 @import "fonts.scss";
 
-body{
-    background-color: #cec;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    background: url(../img/flower.jpg) center center no-repeat;
-    background-size: cover;
-
-    @media (max-width: 760px){
-        background-color: rgb(184, 98, 17);
-    }
-    .block{
-        font-family: "Wider";
-        color: #0b0;
-        margin: auto;
-        width: 500px;
-        max-height: 500px;
-        overflow: hidden;
-        img{
-            width: 100%;
-        }
-
-        @media (max-width: 760px){
-            color: rgb(0, 187, 156);
-            padding: 0px 0px 0px 0px;
-            
-				}
-				.red{
-					color: red;
-				}
-    
-    }
+body {
+    .block {}
 }
