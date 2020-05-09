@@ -1,0 +1,5 @@
+# Ignoging:
+*.err
+*.log
+node_modules/
+.tmp/
