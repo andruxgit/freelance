@@ -2,4 +2,4 @@
 
 
 
-console.log("yess")
+console.log("yessыы")
