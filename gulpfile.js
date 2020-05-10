@@ -90,6 +90,7 @@ function css() {
 		)
 		.pipe(webpcss())
 		.pipe(dest(path.build.css))
+		.pipe(browsersync.stream())
 		.pipe(clean_css())
 		.pipe(
 			rename({
@@ -116,7 +117,7 @@ function js() {
 		.pipe(browsersync.stream())
 }
 function jsVendor() {
-	console.log("jsVendor")
+	
 	return src(path.src.jsVendor)
 		.pipe(fileinclude())
 		.pipe(dest(path.build.js))
