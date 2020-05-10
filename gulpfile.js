@@ -12,6 +12,7 @@ let path = {
 		js: project_folder + "/js/",
 		img: project_folder + "/img/",
 		fonts: project_folder + "/fonts/",
+		fontAve: project_folder + "/fonts/fa/",
 		icons: project_folder + "/img/icons",
 	},
 	src: {
@@ -21,6 +22,7 @@ let path = {
 		jsVendor: source_folder + "/js/vendors.js",
 		img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
 		fonts: source_folder + "/fonts/*.ttf",
+		fontAve: source_folder + "/fonts/fa/*.*",
 		icons: source_folder + "/icons/*.svg",
 	},
 	watch: {
@@ -159,6 +161,12 @@ function icons() {
 		.pipe(dest(path.build.icons))
 		.pipe(browsersync.stream())
 }
+function fontAve() {
+	return src(path.src.fontAve)
+		
+		.pipe(dest(path.build.fontAve))
+		.pipe(browsersync.stream())
+}
 
 function fonts() {
 	src(path.src.fonts)
@@ -242,7 +250,7 @@ function watchFiles(params) {
 	
 }
 
-let build = gulp.series(clean, gulp.parallel(css,html,js,jsVendor,images,icons,fonts),fontsStyle);
+let build = gulp.series(clean, gulp.parallel(css,html,js,jsVendor,fontAve,images,icons,fonts),fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
@@ -251,6 +259,7 @@ exports.fonts = fonts;
 exports.icons = icons;
 exports.images = images;
 exports.jsVendor = jsVendor;
+exports.fontAve = fontAve;
 exports.js = js;
 exports.css = css;
 exports.html = html;

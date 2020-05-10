@@ -46,10 +46,14 @@
 //====================================================================================================
 
 .cell {
+	
 }
 .popup-content {
+	@include cnt(250px);
+	width: 450px;
 	color:#b00;
 	font-size: medium;
+	font-family: $fontfamily;
 }
 .popup-close {
 }
@@ -58,11 +62,14 @@
 		// .popup__title
 
 		&__title {
+			font-size: 32px;
+			color: #0b0;
 		}
-
+		
 		// .popup__txt
-
+		
 		&__txt {
+			font-size: 18px;
 		}
 }
 .popup-form {
@@ -77,14 +84,28 @@
 .form-input {
 }
 .input {
+	width: 250px;
+	border: #00b solid 1px;
+	margin: 10px auto;
+	height: 20px;
 }
 .req {
 }
 .email {
 }
 .form-button {
+	width: 100px;
+	margin: 0 auto;
 }
 .btn {
+	width: 250px;
+	border: #00b solid 1px;
+	margin: 10px auto;
+	height: 20px;
+	i{
+
+		font-size: 20px;
+	}
 }
 .fw {
 }
