@@ -17,7 +17,8 @@ let path = {
 	src: {
 		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
 		css: source_folder + "/scss/style.scss",
-		js: source_folder + "/js/script.js",
+		js: source_folder + "/js/main.js",
+		jsVendor: source_folder + "/js/vendors.js",
 		img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
 		fonts: source_folder + "/fonts/*.ttf",
 		icons: source_folder + "/icons/*.svg",
@@ -114,6 +115,22 @@ function js() {
 		.pipe(dest(path.build.js))
 		.pipe(browsersync.stream())
 }
+function jsVendor() {
+	console.log("jsVendor")
+	return src(path.src.jsVendor)
+		.pipe(fileinclude())
+		.pipe(dest(path.build.js))
+		.pipe(
+			uglify()
+		)
+		.pipe(
+			rename({
+				extname: ".min.js"
+			})
+		)
+		.pipe(dest(path.build.js))
+		.pipe(browsersync.stream())
+}
 
 function images() {
 	return src(path.src.img)
@@ -157,6 +174,25 @@ gulp.task('otf2ttf', function () {
 			formats: ['ttf']
 		}))
 		.pipe(dest(source_folder + '/fonts/'));
+})
+
+
+gulp.task('jsVendors', function () {
+	
+	return src(path.src.jsVendor)
+	.pipe(fileinclude())
+	.pipe(dest(path.build.js))
+	.pipe(
+		uglify()
+	)
+	.pipe(
+		rename({
+			extname: ".min.js"
+		})
+	)
+	.pipe(dest(path.build.js))
+	.pipe(browsersync.stream())
+
 })
 
 gulp.task('svgSprite', function () {
@@ -205,7 +241,7 @@ function watchFiles(params) {
 	
 }
 
-let build = gulp.series(clean, gulp.parallel(css,html,js,images,icons,fonts),fontsStyle);
+let build = gulp.series(clean, gulp.parallel(css,html,js,jsVendor,images,icons,fonts),fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
@@ -213,6 +249,7 @@ exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.icons = icons;
 exports.images = images;
+exports.jsVendor = jsVendor;
 exports.js = js;
 exports.css = css;
 exports.html = html;
