@@ -10,8 +10,8 @@ function forms(){
 				mss=1;
 			}
 			var opt={
-				cursorcolor:"#9B4E7C",
-				cursorwidth: "12px",
+				cursorcolor:"#00b",
+				cursorwidth: "15px",
 				background: "",
 				autohidemode:false,
 				bouncescroll:false,
@@ -19,7 +19,7 @@ function forms(){
 				scrollspeed:scs,
 				mousescrollstep:mss,
 				directionlockdeadzone:0,
-				cursorborder: "0px solid #fff",
+				cursorborder: "1px solid rgb(245, 212, 23)",
 			};
 			return opt;
 		}

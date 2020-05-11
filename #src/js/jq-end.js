@@ -1,2 +1,2 @@
-console.log("that is OK")
+console.log("js-end")
 });

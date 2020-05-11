@@ -1,8 +1,50 @@
 //<ОСНОВНОЙ БЛОК>====================================================================================================
+.spollers {
+    &__title {
+        &.active {
+            color: rgb(28, 168, 35);
+        }
+    }
+
+    // .spollers__text
+
+    &__text {
+        display: none;
+    }
+}
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
+.block__select-select-block .select .select-title .select-title__value{
+	color:#b0b;
+	// title
+
+}
+
+.block__select__select.select .select-options__value {
+			color:#bbb
+			// items
+}
+
+.section__select-select-block .select .select-title .select-title__value{
+	color:#b00;
+
+}
+
+.section__select__select.select .select-options__value {
+			color:#0b0
+}
+
+.section__select__select.select.select .select-options-scroll{
+		min-height: 110px; 
+		// scroll
+}
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================
+
 .row:after {
 	display: block;
 	content: "";

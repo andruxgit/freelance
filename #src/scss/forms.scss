@@ -62,7 +62,9 @@ input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:n
 	display: block;
 	padding: 0px 20px;
 	&.focus{}
-	&.err{}
+	&.err{
+		border: 4px rgb(246, 242, 6) solid;
+	}
 }
 textarea.input{
 	resize:none;
@@ -82,7 +84,8 @@ textarea.input{
 	}
 	&.active{
 		&:before{
-			background: url('../img/icons/check.png') center no-repeat;
+			// background: url('../img/icons/check.png') center no-repeat;
+			background-color: #bb0;
 		}
 	}
 }
@@ -94,7 +97,8 @@ textarea.input{
 	input{display: none;}
 	&:before{position: absolute;left: 0;top: 0;width: 16px;height: 16px;content: '';border: 1px solid #7f7f7f;border-radius: 50%;}
 	&.active{
-		&:before{background: url('../img/icons/option.png') center no-repeat;}
+		// &:before{background: url('../img/icons/option.png') center no-repeat;}
+		&:before{background-color: #bb0;}
 	}
 }
 //</OPTIONS>====================================================================================================
