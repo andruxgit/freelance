@@ -45,11 +45,11 @@
 					<input autocomplete="off" type="text" name="form[]" data-value="Введи имя" data-error="Текст ошибки"
 						class="input req l">
 				</div>
-				<!-- <div class="form-block__item">
+				<div class="form-block__item">
 					<input autocomplete="off" type="phone" name="form[]" data-value="Введи телефон" data-error="Текст ошибки"
-						class="input req ">
-					</div> -->
-					<!-- req -->
+						class="input req phone">
+				</div>
+				<!-- req -->
 				<!-- <div class="form-block__item">
 					<input autocomplete="true" type="email" name="form[]" data-value="Введи email" data-error="Текст ошибки"
 						class="input req email">	
@@ -137,30 +137,75 @@
 					<option value="3">Пункт №7</option>
 					<option value="4">Пункт №8</option>
 				</select>
-				
+
 			</div>
 			<br>
 			<br>
-		
-				<button type="submit" class="form-block__btn btn">Отправить форму</button>
-		 
-				<br>
-				<br>
-					<div class="form-block__item">
-						<!-- подключить <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> -->
-						<div class="category-params-item-price">
-							<div class="category-params-item-price-table table">
-								<div class="cell">
-									<input type="text" name="form[]" id="rangefrom" />
-								</div>
-								<div class="cell">
-									<input type="text" name="form[]" id="rangeto" />
-								</div>
-							</div>
-							<div id="range" class="category-params-item-price-range"></div>
+
+			<button type="submit" class="form-block__btn btn">Отправить форму</button>
+
+			<br>
+			<br>
+			<div class="form-block__item">
+				<!-- подключить <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> -->
+				<!-- form.js "range"-->
+				<div class="category-params-item-price">
+					<div class="category-params-item-price-table table">
+						<div class="cell">
+							<input type="text" name="form[]" id="rangefrom" />
+						</div>
+						<div class="cell">
+							<input type="text" name="form[]" id="rangeto" />
 						</div>
 					</div>
+					<div id="range" class="category-params-item-price-range"></div>
+				</div>
+			</div>
+			<br>
+			<br>
+
+
+			<div class="rating-block">
+				<div class="rating edit">
+					<!-- edit возможность ставить рейтинг-->
+					<div class="rating__line"></div>
+					<div class="rating__activeline"></div>
+					<input value="5" type="hidden" name="rating" />
+					<div class="stars">
+						<span class="star"><i>Ужасно</i></span>
+						<span class="star"><i>Плохо</i></span>
+						<span class="star"><i>Нормально</i></span>
+						<span class="star"><i>Хорошо</i></span>
+						<span class="star"><i>Отлично</i></span>
+					</div>
+				</div>
+				<div class="rating__value">5</div>
+			</div>
+
+
 		</form>
-		
+
+		<br>
+		<br>
+
+		<div class="block__gallery gallery-block gallery">
+			<a href="../img/Koala.jpg" class="gallery-block__item">
+				<img src="../img/Koala.jpg" alt="img">
+			</a>
+			<a href="../img/Koala.jpg" class="gallery-block__item">
+				<img src="../img/Koala.jpg" alt="img">
+			</a>
+			<a href="../img/Koala.jpg" class="gallery-block__item">
+				<img src="../img/Koala.jpg" alt="img">
+			</a>
+			<a href="../img/Koala.jpg" class="gallery-block__item">
+				<img src="../img/Koala.jpg" alt="img">
+			</a>
+
+		</div>
+		<br>
+		<br>
+<div class="block__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. <span data-content= "Answer" class="tip">?</span></div>
+
 	</div>
 </div>

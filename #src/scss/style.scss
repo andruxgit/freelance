@@ -54,10 +54,14 @@ body {
 		font-weight: 700;
 		background-color: #b0b;
 		min-height: 1000px;
+		padding-bottom: 150px;
 
     &.lock {
         overflow: hidden;
-    }
+		}
+		.wrapper{
+			padding: 150px 0;
+		}
 }
 
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
@@ -104,8 +108,8 @@ body {
 // @import "../../js/fancybox/jquery.fancybox.scss";
 //@import "datepicker.scss";
 @import "fontawesome.scss";
-//@import "popover.min.scss";
-//@import "baguetteBox.scss";
+@import "popover.min.scss";
+@import "baguetteBox.scss";
 // @import "pagging.scss";
 //@import "icons.scss";
 @import "popup.scss";
