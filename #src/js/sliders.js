@@ -19,8 +19,8 @@ if($('.mainslider').length>0){
 		}]
 	});
 }
+console.log("sliders ok")
 /*
-
 
 // SLIDER ON MOBILE
 if($('.reviews-object__items').length>0){

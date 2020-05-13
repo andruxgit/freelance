@@ -18,10 +18,10 @@ function map(n){
 		//pixelOffset: new google.maps.Size(-230,250)
 	});
 	var locations = [
-		[new google.maps.LatLng(53.819055,27.8813694)],
-		[new google.maps.LatLng(53.700055,27.5513694)],
-		[new google.maps.LatLng(53.809055,27.5813694)],
-		[new google.maps.LatLng(53.859055,27.5013694)],
+		[new google.maps.LatLng(33.819055,27.8813694)],
+		[new google.maps.LatLng(33.700055,27.5513694)],
+		[new google.maps.LatLng(33.809055,27.5813694)],
+		[new google.maps.LatLng(33.859055,27.5013694)],
 	]
 	var options = {
 		zoom: 10,
